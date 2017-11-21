@@ -8,5 +8,3 @@
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr
 #
-#
-export PATH=$PATH:~/.cabal/bin
