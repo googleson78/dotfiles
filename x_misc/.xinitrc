@@ -2,3 +2,4 @@ setxkbmap -option grp:switch,grp:lwin_toggle,grp_led:scroll us,bg -variant ,bas_
 setxkbmap -option 'caps:ctrl_modifier'
 xrdb ~/.Xresources
 exec i3
+unclutter &
