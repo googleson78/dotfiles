@@ -1,0 +1,65 @@
+" vi compatibility 
+set nocompatible
+" number lines
+set number
+"relative number lines - allows for moving aroung with numbers
+set relativenumber
+"st fix maybe?
+" Tabs start
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+"spaces instead of tabs
+set expandtab
+"searching small letters = ignore
+set ignorecase
+"searching non-small letters = all
+set smartcase
+"search globally by default
+set gdefault
+"don't think I need this anymore
+set incsearch
+set showmatch
+set hlsearch
+"leader
+let mapleader="'"
+"close code preview after insert mode
+let g:ycm_autoclose_preview_window_after_insertion = 1
+"gotta fix ycm python compat. one day
+let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
+"clear highlight
+nnoremap <leader><space> :noh<cr>
+"bind tab to %
+nnoremap <tab> %
+vnoremap <tab> %
+"move displayed lines, not physical
+nnoremap j gj
+nnoremap k gk
+"jk -> esc
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+"wtf this bugs out and when I open a file it's instantly
+"in replace mode??
+"nnoremap <esc> <nop>
+"
+"allow . t work in visual block mode for multiple lines
+"vnoremap . :normal .<CR>
+"switch tabs
+nnoremap <F7> :tabp <CR>
+nnoremap <F8> :tabn <CR>
+"scrolloff
+set scrolloff=5
+syntax enable
+filetype off
+filetype plugin indent on
+
+"move between splits
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+"open splits below and to the right of current split
+set splitbelow
+set splitright
