@@ -22,7 +22,7 @@ set incsearch
 set showmatch
 set hlsearch
 "leader
-let mapleader=";"
+let mapleader="'"
 "close code preview after insert mode
 let g:ycm_autoclose_preview_window_after_insertion = 1
 "gotta fix ycm python compat. one day
@@ -32,22 +32,19 @@ nnoremap <leader><space> :noh<cr>
 "bind tab to %
 nnoremap <tab> %
 vnoremap <tab> %
-"arrow keys are for losers and moving stuff around
-nnoremap <up> ddkkp
-nnoremap <down> ddp
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 "move displayed lines, not physical
 nnoremap j gj
 nnoremap k gk
 "jk -> esc
 inoremap jk <esc>
 inoremap <esc> <nop>
-nnoremap <esc> <nop>
+
+"wtf this bugs out and when I open a file it's instantly
+"in replace mode??
+"nnoremap <esc> <nop>
+"
+"allow . t work in visual block mode for multiple lines
+"vnoremap . :normal .<CR>
 "switch tabs
 nnoremap <F7> :tabp <CR>
 nnoremap <F8> :tabn <CR>
@@ -62,6 +59,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
+
+"open splits below and to the right of current split
+set splitbelow
+set splitright
 
 call plug#begin()
 Plug 'Valloric/YouCompleteMe'
@@ -84,4 +85,5 @@ map g/ <Plug>(incsearch-stay)
 set background=dark
 set termguicolors
 let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 colorscheme gruvbox
