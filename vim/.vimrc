@@ -22,7 +22,8 @@ set incsearch
 set showmatch
 set hlsearch
 "leader
-let mapleader="'"
+let mapleader=";"
+let maplocalleader="'"
 "clear highlight
 nnoremap <leader><space> :noh<cr>
 "bind tab to %
@@ -69,6 +70,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'derekelkins/agda-vim'
 call plug#end()
 
 "incsearch
