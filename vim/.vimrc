@@ -23,10 +23,6 @@ set showmatch
 set hlsearch
 "leader
 let mapleader="'"
-"close code preview after insert mode
-let g:ycm_autoclose_preview_window_after_insertion = 1
-"gotta fix ycm python compat. one day
-let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
 "clear highlight
 nnoremap <leader><space> :noh<cr>
 "bind tab to %
@@ -37,12 +33,8 @@ nnoremap j gj
 nnoremap k gk
 "jk -> esc
 inoremap jk <esc>
-inoremap <esc> <nop>
+"inoremap <esc> <nop>
 
-"wtf this bugs out and when I open a file it's instantly
-"in replace mode??
-"nnoremap <esc> <nop>
-"
 "allow . t work in visual block mode for multiple lines
 "vnoremap . :normal .<CR>
 "switch tabs
@@ -51,8 +43,13 @@ nnoremap <F8> :tabn <CR>
 "scrolloff
 set scrolloff=5
 syntax enable
-filetype off
-filetype plugin indent on
+
+"detect filetypes
+filetype on
+"load plugins for corresponding filetypes
+filetype indent on
+"load indents for corresponding filetypes
+filetype plugin on
 
 "move between splits
 nnoremap <c-h> <c-w>h
@@ -60,13 +57,11 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-"open splits below and to the right of current split
+"open splits below and to the right ofj
 set splitbelow
 set splitright
 
 call plug#begin()
-Plug 'Valloric/YouCompleteMe'
-Plug 'rdnetto/YCM-Generator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'flazz/vim-colorschemes'
