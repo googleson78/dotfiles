@@ -62,6 +62,12 @@ nnoremap <c-l> <c-w>l
 set splitbelow
 set splitright
 
+"auto save and restore folds
+set viewoptions-=options
+
+autocmd BufWinLeave ?* mkview
+autocmd BufWinEnter ?* silent loadview
+
 call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
