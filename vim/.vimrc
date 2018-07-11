@@ -77,6 +77,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'derekelkins/agda-vim'
+Plug 'jaspervdj/stylish-haskell', { 'do': 'stack install' }
+Plug 'nbouscal/vim-stylish-haskell'
 call plug#end()
 
 "incsearch
