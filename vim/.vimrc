@@ -71,6 +71,7 @@ autocmd BufWinEnter ?* silent loadview
 call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'dyng/ctrlsf.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
@@ -86,7 +87,49 @@ map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-"colorscheme
+
+" ctrlsf settings
+" focus on the ctrlsf window when it's done
+" TODO doesn't work with longer search? TODO
+let g:ctrlsf_auto_focus = {
+    \ "at" : "done"
+    \ }
+
+" search from project root by default (finds .git)
+" currently trying out current dir, just open vim in project root
+let g:ctrlsf_default_root = 'cwd'
+
+" use compact mode by default
+let g:ctrlsf_default_view_mode = 'compact'
+
+" maps to not conflict with my binds
+let g:ctrlsf_mapping = {
+    \ "open"    : ["<CR>", "o"],
+    \ "openb"   : "O",
+    \ "split"   : "<C-x>",
+    \ "vsplit"  : "<C-v>",
+    \ "tab"     : "<C-t>",
+    \ "tabb"    : "T",
+    \ "popen"   : "p",
+    \ "popenf"  : "P",
+    \ "quit"    : "q",
+    \ "next"    : "n",
+    \ "prev"    : "N",
+    \ "pquit"   : "q",
+    \ "loclist" : "",
+    \ "chgmode" : "M",
+    \ "stop"    : "<C-C>",
+    \ }
+
+" open window on the right
+let g:ctrlsf_position = 'right'
+
+nmap <space>w :Buffers<cr>
+nmap <space>q :Files<cr>
+nmap <space>o <Plug>CtrlSFCwordExec
+vmap <space>o <Plug>CtrlSFVwordExec
+
+" colorscheme
 set background=dark
 set termguicolors
 let g:gruvbox_contrast_dark='hard'
