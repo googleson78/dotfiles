@@ -2,7 +2,7 @@
 set nocompatible
 " number lines
 set number
-"relative number lines - allows for moving aroung with numbers
+"relative number lines - allows for moving around with numbers
 set relativenumber
 "st fix maybe?
 " Tabs start
