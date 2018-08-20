@@ -2,7 +2,7 @@
 set nocompatible
 " number lines
 set number
-"relative number lines - allows for moving around with numbers
+"relative number lines - allows for moving aroung with numbers
 set relativenumber
 "st fix maybe?
 " Tabs start
@@ -68,18 +68,37 @@ set viewoptions-=options
 autocmd BufWinLeave ?* mkview
 autocmd BufWinEnter ?* silent loadview
 
+"display filename in statusline
+"set statusline+=%F\ %l\:%c
+"
+"set laststatus=2
+
 call plug#begin()
+" fuzzy searching different stuff
+" files mostly
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" grep
 Plug 'dyng/ctrlsf.vim'
-Plug 'flazz/vim-colorschemes'
+
+" stuff inside vim
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
+
+" git
 Plug 'tpope/vim-fugitive'
+
+" agda
 Plug 'derekelkins/agda-vim'
+
+" haskell
 Plug 'jaspervdj/stylish-haskell', { 'do': 'stack install' }
 Plug 'nbouscal/vim-stylish-haskell'
+
+" rice
+Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 "incsearch
@@ -130,8 +149,11 @@ nmap <space>o <Plug>CtrlSFCwordExec
 vmap <space>o <Plug>CtrlSFVwordExec
 
 " colorscheme
-set background=dark
 set termguicolors
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_contrast_light='hard'
-colorscheme gruvbox
+colorscheme af
+
+" gruvbox stuff
+"set background=dark
+"let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_contrast_light='hard'
+"colorscheme gruvbox
