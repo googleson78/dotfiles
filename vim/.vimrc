@@ -73,6 +73,10 @@ autocmd BufWinEnter ?* silent loadview
 "
 "set laststatus=2
 
+" clear trailing whitespace on save
+
+autocmd BufWritePost ?* %s/\s\+$//e
+
 call plug#begin()
 " fuzzy searching different stuff
 " files mostly
