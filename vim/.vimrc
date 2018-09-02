@@ -150,10 +150,10 @@ vmap <space>o <Plug>CtrlSFVwordExec
 
 " colorscheme
 set termguicolors
-colorscheme af
+"colorscheme af
 
 " gruvbox stuff
-"set background=dark
-"let g:gruvbox_contrast_dark='hard'
-"let g:gruvbox_contrast_light='hard'
-"colorscheme gruvbox
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
+colorscheme gruvbox
