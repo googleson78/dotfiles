@@ -1,80 +1,77 @@
-" vi compatibility 
+" disable vi compatibility
 set nocompatible
 " number lines
 set number
-"relative number lines - allows for moving aroung with numbers
+" relative number lines - allows for moving aroung with numbers
 set relativenumber
-"st fix maybe?
 " Tabs start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-"spaces instead of tabs
+" spaces instead of tabs
 set expandtab
-"searching small letters = ignore
+" searching small letters = ignore
 set ignorecase
-"searching non-small letters = all
+" searching non-small letters = all
 set smartcase
-"search globally by default
+" search globally by default
 set gdefault
-"don't think I need this anymore
+" don't think I need this anymore
 set incsearch
 set showmatch
 set hlsearch
-"leader
+" leader
 let mapleader=";"
 let maplocalleader="'"
-"clear highlight
+" run make and open the quickfix buffer
+nnoremap <leader>e :make<cr>:copen<cr><cr>
+nnoremap <leader>r :cclose<cr>
+" clear highlight
 nnoremap <leader><space> :noh<cr>
-"bind tab to %
+" bind tab to %
 nnoremap <tab> %
 vnoremap <tab> %
-"move displayed lines, not physical
+" move displayed lines, not physical
 nnoremap j gj
 nnoremap k gk
-"jk -> esc
+" jk -> esc
 inoremap jk <esc>
-"inoremap <esc> <nop>
 
-"allow . t work in visual block mode for multiple lines
-"vnoremap . :normal .<CR>
-"switch tabs
+" switch tabs
 nnoremap <F7> :tabp <CR>
 nnoremap <F8> :tabn <CR>
-"scrolloff
+" scrolloff
 set scrolloff=5
 syntax enable
 
-"detect filetypes
+" detect filetypes
 filetype on
-"load plugins for corresponding filetypes
+" load plugins for corresponding filetypes
 filetype indent on
-"load indents for corresponding filetypes
+" load indents for corresponding filetypes
 filetype plugin on
 
-"move between splits
+" move between splits
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-"open splits below and to the right ofj
+" open splits below and to the right of
 set splitbelow
 set splitright
 
-"auto save and restore folds
+" auto save and restore folds
 set viewoptions-=options
 
-autocmd BufWinLeave ?* mkview
-autocmd BufWinEnter ?* silent loadview
+" disable these for now becaus they mess with my quickfix
+"autocmd BufWinLeave ?* mkview
+"autocmd BufWinEnter ?* silent loadview
 
-"display filename in statusline
-"set statusline+=%F\ %l\:%c
-"
-"set laststatus=2
+" fuck the racket repl
+autocmd FileType scheme setlocal makeprg=/usr/bin/racket\ %
 
 " clear trailing whitespace on save
-
 autocmd BufWritePost ?* %s/\s\+$//e
 
 call plug#begin()
@@ -105,7 +102,7 @@ Plug 'nbouscal/vim-stylish-haskell'
 Plug 'flazz/vim-colorschemes'
 call plug#end()
 
-"incsearch
+" incsearch
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
