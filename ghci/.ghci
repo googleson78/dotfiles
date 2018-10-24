@@ -3,3 +3,10 @@
 
 -- fully qualified module names are annoying
 :set -dsuppress-module-prefixes
+
+:set -XOverloadedStrings
+
+import qualified Data.Text as T
+import qualified Data.Text.IO as T
+
+import qualified Data.ByteString as BS
