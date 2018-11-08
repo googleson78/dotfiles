@@ -94,12 +94,11 @@ Plug 'tpope/vim-fugitive'
 " agda
 Plug 'derekelkins/agda-vim'
 
-" haskell
-Plug 'jaspervdj/stylish-haskell', { 'do': 'stack install' }
-Plug 'nbouscal/vim-stylish-haskell'
-
 " rice
 Plug 'flazz/vim-colorschemes'
+
+"eye candy
+Plug 'AndrewRadev/discotheque.vim'
 call plug#end()
 
 " incsearch
@@ -150,7 +149,7 @@ nmap <space>o <Plug>CtrlSFCwordExec
 vmap <space>o <Plug>CtrlSFVwordExec
 
 " colorscheme
-set termguicolors
+"set termguicolors
 "colorscheme af
 
 " gruvbox stuff
