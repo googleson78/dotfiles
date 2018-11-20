@@ -69,6 +69,8 @@ set viewoptions-=options
 " fuck the racket repl
 autocmd FileType scheme setlocal makeprg=/usr/bin/racket\ %
 
+autocmd FileType idris call SetIdrisIndent()
+
 " clear trailing whitespace on save
 autocmd BufWritePost ?* %s/\s\+$//e
 
@@ -91,6 +93,9 @@ Plug 'tpope/vim-fugitive'
 
 " agda
 Plug 'derekelkins/agda-vim'
+
+" idris
+Plug 'idris-hackers/idris-vim'
 
 " rice
 Plug 'flazz/vim-colorschemes'
@@ -145,6 +150,14 @@ nmap <space>w :Buffers<cr>
 nmap <space>q :Files<cr>
 nmap <space>o <Plug>CtrlSFCwordExec
 vmap <space>o <Plug>CtrlSFVwordExec
+
+" idris settings
+
+function SetIdrisIndent()
+    set tabstop=2
+    set softtabstop=2
+    set shiftwidth=2
+endfunction
 
 " colorscheme
 "set termguicolors
