@@ -1,5 +1,7 @@
 " disable vi compatibility
 set nocompatible
+" number lines
+set number
 " relative number lines - allows for moving aroung with numbers
 set relativenumber
 " Tabs start
