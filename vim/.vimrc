@@ -90,6 +90,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 
+" smarter numberlines
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 " git
 Plug 'tpope/vim-fugitive'
 
@@ -102,7 +105,7 @@ Plug 'idris-hackers/idris-vim'
 " rice
 Plug 'flazz/vim-colorschemes'
 
-"eye candy
+" eye candy
 Plug 'AndrewRadev/discotheque.vim'
 call plug#end()
 
@@ -156,9 +159,9 @@ vmap <space>o <Plug>CtrlSFVwordExec
 " idris settings
 
 function SetIdrisIndent()
-    set tabstop=2
-    set softtabstop=2
-    set shiftwidth=2
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
 endfunction
 
 " colorscheme
