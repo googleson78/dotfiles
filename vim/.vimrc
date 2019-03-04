@@ -68,6 +68,7 @@ set viewoptions-=options
 "autocmd BufWinLeave ?* mkview
 "autocmd BufWinEnter ?* silent loadview
 
+" allow backspace, but not on already inserted stuff
 set backspace=1
 
 " fuck the racket repl
