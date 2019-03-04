@@ -68,6 +68,8 @@ set viewoptions-=options
 "autocmd BufWinLeave ?* mkview
 "autocmd BufWinEnter ?* silent loadview
 
+set backspace=1
+
 " fuck the racket repl
 autocmd FileType scheme setlocal makeprg=/usr/bin/racket\ %
 
