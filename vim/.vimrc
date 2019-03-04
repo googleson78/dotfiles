@@ -22,7 +22,7 @@ set showmatch
 set hlsearch
 " leader
 let mapleader=";"
-let maplocalleader="'"
+let maplocalleader="`"
 " run make and open the quickfix buffer
 nnoremap <leader>e :make<cr>:copen<cr><cr>
 nnoremap <leader>r :cclose<cr>
