@@ -24,8 +24,8 @@ set hlsearch
 let mapleader=";"
 let maplocalleader="`"
 " run make and open the quickfix buffer
-nnoremap <leader>e :make<cr>:copen<cr><cr>
-nnoremap <leader>r :cclose<cr>
+"nnoremap <leader>e :make<cr>:copen<cr><cr>
+"nnoremap <leader>r :cclose<cr>
 " clear highlight
 nnoremap <leader><space> :noh<cr>
 " bind tab to %
@@ -68,8 +68,10 @@ set viewoptions-=options
 "autocmd BufWinLeave ?* mkview
 "autocmd BufWinEnter ?* silent loadview
 
-" allow backspace, but not on already inserted stuff
 set backspace=1
+
+" agda indent
+autocmd FileType agda setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " fuck the racket repl
 autocmd FileType scheme setlocal makeprg=/usr/bin/racket\ %
