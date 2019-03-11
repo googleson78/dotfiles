@@ -25,7 +25,7 @@ let mapleader=";"
 let maplocalleader="`"
 " run make and open the quickfix buffer
 "nnoremap <leader>e :make<cr>:copen<cr><cr>
-"nnoremap <leader>r :cclose<cr>
+nnoremap <leader>r :cclose<cr>
 " clear highlight
 nnoremap <leader><space> :noh<cr>
 " bind tab to %
@@ -170,7 +170,7 @@ function SetIdrisIndent()
 endfunction
 
 " colorscheme
-"set termguicolors
+set termguicolors
 "colorscheme af
 
 " gruvbox stuff
