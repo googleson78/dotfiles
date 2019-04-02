@@ -112,6 +112,9 @@ Plug 'flazz/vim-colorschemes'
 
 " eye candy
 Plug 'AndrewRadev/discotheque.vim'
+
+" sql?
+Plug 'tpope/vim-dadbod'
 call plug#end()
 
 " incsearch
