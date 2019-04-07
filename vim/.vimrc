@@ -115,6 +115,9 @@ Plug 'AndrewRadev/discotheque.vim'
 
 " sql?
 Plug 'tpope/vim-dadbod'
+
+" edit tags
+Plug 'AndrewRadev/id3.vim'
 call plug#end()
 
 " incsearch
