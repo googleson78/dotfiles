@@ -72,6 +72,11 @@ set viewoptions-=options
 " "insert" session
 set backspace=1
 
+" allow "per project" vimrcs
+set exrc
+" don't load vimrcs not owned by me
+set secure
+
 " agda indent
 autocmd FileType agda setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
