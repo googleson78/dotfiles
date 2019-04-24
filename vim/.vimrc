@@ -68,6 +68,8 @@ set viewoptions-=options
 "autocmd BufWinLeave ?* mkview
 "autocmd BufWinEnter ?* silent loadview
 
+" disallow backspace from deleting text that wasn't entered in the current
+" "insert" session
 set backspace=1
 
 " agda indent
