@@ -5,9 +5,9 @@ set number
 " relative number lines - allows for moving aroung with numbers
 set relativenumber
 " Tabs start
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 " spaces instead of tabs
 set expandtab
 " searching small letters = ignore
