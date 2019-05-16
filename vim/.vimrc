@@ -126,8 +126,8 @@ Plug 'tpope/vim-dadbod'
 " edit tags
 Plug 'AndrewRadev/id3.vim'
 
-" language packs
-Plug 'sheerun/vim-polyglot'
+" haskell
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 " incsearch
