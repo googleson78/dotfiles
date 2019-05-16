@@ -114,8 +114,9 @@ Plug 'derekelkins/agda-vim'
 " idris
 Plug 'idris-hackers/idris-vim'
 
-" rice
-Plug 'flazz/vim-colorschemes'
+" gruvbox, but with modified haskell + purescript
+" and possibly my own stuff (soon)
+Plug 'googleson78/gruvbox'
 
 " eye candy
 Plug 'AndrewRadev/discotheque.vim'
