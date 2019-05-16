@@ -126,6 +126,9 @@ Plug 'tpope/vim-dadbod'
 " edit tags
 Plug 'AndrewRadev/id3.vim'
 
+" purescript
+Plug 'purescript-contrib/purescript-vim'
+
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 call plug#end()
