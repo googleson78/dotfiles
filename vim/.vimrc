@@ -1,3 +1,5 @@
+" https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+set nomodeline
 " disable vi compatibility
 set nocompatible
 " number lines
@@ -132,6 +134,10 @@ Plug 'purescript-contrib/purescript-vim'
 
 " haskell
 Plug 'neovimhaskell/haskell-vim'
+
+" dhall
+Plug 'vmchale/dhall-vim'
+
 call plug#end()
 
 " incsearch
