@@ -1,5 +1,7 @@
 -- module imports are annoying
 :set prompt "> "
+-- also annoying in multiline stuff
+:set prompt-cont ">|"
 
 -- fully qualified module names are annoying
 :set -dsuppress-module-prefixes
