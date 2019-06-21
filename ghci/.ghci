@@ -3,6 +3,9 @@
 -- also annoying in multiline stuff
 :set prompt-cont ">|"
 
+-- allow multiline stuff
+:set +m
+
 -- fully qualified module names are annoying
 :set -dsuppress-module-prefixes
 
