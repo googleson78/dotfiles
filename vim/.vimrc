@@ -79,6 +79,9 @@ set exrc
 " don't load vimrcs not owned by me
 set secure
 
+" share register with system clipboard by default
+set clipboard=unnamed
+
 " agda indent
 autocmd FileType agda setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
