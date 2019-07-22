@@ -64,9 +64,13 @@ ZSH_THEME="afowler"
 plugins=(
   git
   ssh-agent
+  zsh-nvm
 )
 
 zstyle :omz:plugins:ssh-agent identities id_ecdsa id_rsa
+
+# lazily load nvm
+export NVM_LAZY_LOAD=true
 
 source $ZSH/oh-my-zsh.sh
 
