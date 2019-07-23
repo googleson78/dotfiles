@@ -1,0 +1,25 @@
+[user]
+	name = Georgi Lyubenov
+	email = godzbanebane@gmail.com
+[push]
+	default = upstream
+[core]
+	excludesfile = /home/googleson78/.gitignore_global
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[merge]
+	conflictStyle = diff3
+[alias]
+  graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
