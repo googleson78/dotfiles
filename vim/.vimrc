@@ -89,6 +89,11 @@ set secure
 " share register with system clipboard by default
 set clipboard=unnamed
 
+" copy file and overwrite old one instead of renaming and writing a new one
+" this is used because some tools (`spago`) get triggered twice with
+" `backupcopy=no`
+set backupcopy=yes
+
 " agda indent
 autocmd FileType agda setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
