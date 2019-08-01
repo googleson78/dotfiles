@@ -153,6 +153,10 @@ Plug 'neovimhaskell/haskell-vim'
 " dhall
 Plug 'vmchale/dhall-vim'
 
+" md
+" TODO: add config!
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 call plug#end()
 
 " incsearch
