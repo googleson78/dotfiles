@@ -307,6 +307,8 @@ order for the change to take effect."
   (".+"        . ("∔"))
   (".-"        . ("∸"))
   (":"         . ,(agda-input-to-string-list "∶⦂ː꞉˸፥፦：﹕︓"))
+  (","         . ,(agda-input-to-string-list "ʻ،⸲⸴⹁⹉、︐︑﹐﹑，､"))
+  (";"         . ,(agda-input-to-string-list "؛⁏፤꛶；︔﹔⍮⸵;"))
   ("::"        . ("∷"))
   ("::-"       . ("∺"))
   ("-:"        . ("∹"))
@@ -625,7 +627,7 @@ order for the change to take effect."
   ;;
   ;; The following combining characters also have (other)
   ;; translations:
-  ;; ̀ ́ ̂ ̃ ̄ ̆ ̇ ̈ ̋ ̌ ̣ ̧ ̱
+  ;;
 
   ("^--" . ,(agda-input-to-string-list"̅̿"))
   ("_--" . ,(agda-input-to-string-list"̲̳"))
@@ -945,7 +947,6 @@ order for the change to take effect."
   ("_s" . ("ₛ"))
   ("_t" . ("ₜ"))
   ("_u" . ("ᵤ"))
-  ("_v" . ("ᵥ"))
   ("_x" . ("ₓ"))
 
   ("^a" . ("ᵃ"))
