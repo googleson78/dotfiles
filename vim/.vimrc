@@ -154,7 +154,6 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'vmchale/dhall-vim'
 
 " md
-" TODO: add config!
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 call plug#end()
@@ -213,6 +212,14 @@ function SetIdrisIndent()
     set softtabstop=4
     set shiftwidth=4
 endfunction
+
+" markdownpreview
+
+" don't close window after switching buffers
+let g:mkdp_auto_close = 0
+
+" allow using MarkdownPreview from all files (not only md)
+let g:mkdp_command_for_global = 1
 
 " colorscheme
 set termguicolors
