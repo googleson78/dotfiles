@@ -153,6 +153,9 @@ Plug 'neovimhaskell/haskell-vim'
 " dhall
 Plug 'vmchale/dhall-vim'
 
+" elm
+Plug 'dtaskoff/elm-vim'
+
 " md
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
