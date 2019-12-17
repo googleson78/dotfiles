@@ -159,7 +159,23 @@ Plug 'dtaskoff/elm-vim'
 " md
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
+" LSP
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
+
+" LanguageClient-neovim
+let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+let g:LanguageClient_serverCommands = {
+    \ 'haskell': ['ghcide', '--lsp'],
+    \ }
+let g:LanguageClient_selectionUI = "fzf"
+
+nmap <space>j :call LanguageClient#textDocument_hover()<cr>
+nmap <space>k :call LanguageClient#textDocument_definition()<cr>
+nmap <space>l :call LanguageClient#textDocument_codeAction()<cr>
 
 " incsearch
 map / <Plug>(incsearch-forward)
