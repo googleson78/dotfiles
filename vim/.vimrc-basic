@@ -1,0 +1,62 @@
+" https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+set nomodeline
+
+" disable vi compatibility
+set nocompatible
+
+" number lines
+set number
+
+" relative number lines - allows for moving around with numbers
+set relativenumber
+
+" Tabs start
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+" spaces instead of tabs
+set expandtab
+
+" searching small letters = ignore
+set ignorecase
+
+" searching non-small letters = all
+set smartcase
+
+" search globally by default
+set gdefault
+
+" some search stuff
+set incsearch
+set showmatch
+set hlsearch
+
+" move displayed lines, not physical
+nnoremap j gj
+nnoremap k gk
+
+" scrolloff - don't wait to go to the edge of the screen to start scrolling
+set scrolloff=5
+syntax enable
+
+" detect filetypes
+filetype on
+" load plugins for corresponding filetypes
+filetype indent on
+" load indents for corresponding filetypes
+filetype plugin on
+
+" open splits below and to the right of
+set splitbelow
+set splitright
+
+" disallow backspace from deleting text that wasn't entered in the current
+" "insert" session - "training wheel"
+set backspace=1
+
+" disable arrow keys - "training wheels"
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>

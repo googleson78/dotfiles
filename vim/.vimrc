@@ -177,6 +177,9 @@ nmap <space>j :call LanguageClient#textDocument_hover()<cr>
 nmap <space>k :call LanguageClient#textDocument_definition()<cr>
 nmap <space>l :call LanguageClient#textDocument_codeAction()<cr>
 
+" place signs in the numbers line
+set signcolumn=number
+
 " incsearch
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
