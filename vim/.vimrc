@@ -177,8 +177,8 @@ nmap <space>j :call LanguageClient#textDocument_hover()<cr>
 nmap <space>k :call LanguageClient#textDocument_definition()<cr>
 nmap <space>l :call LanguageClient#textDocument_codeAction()<cr>
 
-" place signs in the numbers line
-set signcolumn=number
+" don't display signs at all, because nvim has no 'number' option
+set signcolumn=no
 
 " incsearch
 map / <Plug>(incsearch-forward)
