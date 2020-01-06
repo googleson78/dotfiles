@@ -4,6 +4,7 @@ alias -g g=" | grep"
 alias tixe=exit
 alias sshtun="sshuttle --dns -D -x adjoint.fun -r googleson78@adjoint.fun 0.0.0.0/0"
 alias destroystack="find -name '.stack-work' -exec rm -rf {} +"
+alias gs=gst
 alias chez=chezscheme9.5
 alias vim=nvim
 alias vi=nvim
