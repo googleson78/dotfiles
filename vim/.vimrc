@@ -25,7 +25,7 @@ set ignorecase
 set smartcase
 " search globally by default
 set gdefault
-" don't think I need this anymore
+" incremental search
 set incsearch
 set showmatch
 set hlsearch
@@ -33,7 +33,7 @@ set hlsearch
 let mapleader=";"
 let maplocalleader="`"
 " run make and open the quickfix buffer
-"nnoremap <leader>e :make<cr>:copen<cr><cr>
+nnoremap <leader>e :make<cr>:copen<cr><cr>
 nnoremap <leader>r :cclose<cr>
 " clear highlight
 nnoremap <leader><space> :noh<cr>
@@ -117,7 +117,6 @@ Plug 'dyng/ctrlsf.vim'
 " stuff inside vim
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
-Plug 'haya14busa/incsearch.vim'
 
 " smarter numberlines
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -164,7 +163,11 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+Plug 'ayu-theme/ayu-vim' " or other package manager
+
 call plug#end()
+"let ayucolor="mirage" " for mirage version of theme
+"colorscheme ayu
 
 " LanguageClient-neovim
 let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
@@ -177,13 +180,7 @@ nmap <space>j :call LanguageClient#textDocument_hover()<cr>
 nmap <space>k :call LanguageClient#textDocument_definition()<cr>
 nmap <space>l :call LanguageClient#textDocument_codeAction()<cr>
 
-" don't display signs at all, because nvim has no 'number' option
 set signcolumn=no
-
-" incsearch
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
 
 
 " ctrlsf settings
