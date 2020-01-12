@@ -118,9 +118,6 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 
-" smarter numberlines
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-
 " git
 Plug 'tpope/vim-fugitive'
 
