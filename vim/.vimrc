@@ -105,6 +105,11 @@ autocmd FileType idris call SetIdrisIndent()
 " clear trailing whitespace on save
 autocmd BufWritePost ?* %s/\s\+$//e
 
+" enable undo history saving
+set undofile
+" directory for undo files
+set undodir=~/.vim/.undohistory/
+
 call plug#begin()
 " fuzzy searching different stuff
 " files mostly
