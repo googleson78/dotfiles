@@ -45,10 +45,10 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 # applications that use alt+something mode
 mode "disabled_i3_hotkeys"
 {
-	bindsym $mod+Escape mode "default"
+	bindsym shift+Escape mode "default"
 }
 
-bindsym $mod+Escape mode "disabled_i3_hotkeys"
+bindsym shift+Escape mode "disabled_i3_hotkeys"
 
 # change focus
 bindsym $mod+h focus left
