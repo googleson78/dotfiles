@@ -167,10 +167,15 @@ new_window pixel 0
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
+# use a normal font
+font pango:Liberation Mono 9
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
+        # use a normal font
+        font pango:Liberation Mono 9
         colors {
                 focused_workspace  #4c7899 #285577 #ffffff
                 active_workspace   #333333 #5f676a #ffffff
