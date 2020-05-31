@@ -1,0 +1,95 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ stterm (0.8.3-1) unstable; urgency=medium
+ .
+   * New upstream version 0.8.3.
+   * Install the FAQ and LEGAGY files.
+   * d/control:
+     - bump the dh compat level to 13.
+     - bump Standards-Version to 4.5.0 (no changes needed).
+     - specify Rules-Requires-Root: no.
+     - use the paride@debian.org alias in Uploaders.
+   * d/rules:
+     - stop enforcing -Wl,--as-needed (now done by default).
+     - drop override_dh_auto_build (CPPFLAGS now supported upstream).
+Author: Paride Legovini <paride@debian.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2020-05-31
+
+--- stterm-0.8.3.orig/config.def.h
++++ stterm-0.8.3/config.def.h
+@@ -86,30 +86,22 @@ unsigned int tabspaces = 8;
+
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
+-	/* 8 normal colors */
+-	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
+-	"cyan3",
+-	"gray90",
+-
+-	/* 8 bright colors */
+-	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
+-	"cyan",
+-	"white",
+-
+-	[255] = 0,
+-
+-	/* more colors can be added after 255 to use with DefaultXX */
+-	"#cccccc",
++	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
++	"#cc241d",
++	"#98971a",
++	"#d79921",
++	"#458588",
++	"#b16286",
++	"#689d6a",
++	"#a89984",
++	"#928374",
++	"#fb4934",
++	"#b8bb26",
++	"#fabd2f",
++	"#83a598",
++	"#d3869b",
++	"#8ec07c",
++	"#ebdbb2",
+ 	"#555555",
+ };
+
+@@ -118,9 +110,9 @@ static const char *colorname[] = {
+  * Default colors (colorname index)
+  * foreground, background, cursor, reverse cursor
+  */
+-unsigned int defaultfg = 7;
++unsigned int defaultfg = 15;
+ unsigned int defaultbg = 0;
+-static unsigned int defaultcs = 256;
++static unsigned int defaultcs = 15;
+ static unsigned int defaultrcs = 257;
+
+ /*
