@@ -174,6 +174,8 @@ font pango:Liberation Mono 9
 # finds out, if available)
 bar {
         status_command i3status
+        # show tray on primary monitor
+        tray_output primary
         # use a normal font
         font pango:Liberation Mono 9
         colors {
