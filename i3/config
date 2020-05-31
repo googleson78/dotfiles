@@ -170,6 +170,12 @@ bindsym $mod+minus scratchpad show
 # press the same workspace twice to go to previous one
 workspace_auto_back_and_forth yes
 
+# always start deluge on 9
+assign [class="(?i)deluge"] 9
+
+# always start telegram on 10
+assign [class="(?i)telegram"] 10
+
 # use a normal font
 font pango:Liberation Mono 9
 
