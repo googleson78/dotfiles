@@ -169,6 +169,9 @@ Plug 'ayu-theme/ayu-vim' " or other package manager
 
 " matching parens get same colour, different matches are different colours
 Plug 'kien/rainbow_parentheses.vim'
+
+" go to next haskell indentation level
+Plug 'axelf4/vim-haskell'
 call plug#end()
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
