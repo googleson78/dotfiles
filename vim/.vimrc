@@ -167,6 +167,8 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 Plug 'ayu-theme/ayu-vim' " or other package manager
 
+" matching parens get same colour, different matches are different colours
+Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
@@ -250,3 +252,9 @@ set background=dark
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='medium'
 colorscheme gruvbox
+
+" enable rainbow parens on startup
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
