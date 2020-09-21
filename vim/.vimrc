@@ -177,9 +177,13 @@ call plug#end()
 "colorscheme ayu
 
 " LanguageClient-neovim
-let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+let g:LanguageClient_rootMarkers = {
+  \ 'haskell': ['*.cabal', 'stack.yaml'],
+  \ 'elm': ['elm.json']
+  \ }
 let g:LanguageClient_serverCommands = {
     \ 'haskell': ['ghcide', '--lsp'],
+    \ 'elm': ['elm-language-server']
     \ }
 let g:LanguageClient_selectionUI = "fzf"
 
