@@ -182,9 +182,9 @@ let g:LanguageClient_rootMarkers = {
   \ 'elm': ['elm.json']
   \ }
 let g:LanguageClient_serverCommands = {
-    \ 'haskell': ['haskell-language-server', '--lsp'],
-    \ 'elm': ['elm-language-server']
-    \ }
+  \ 'haskell': ['haskell-language-server', '--lsp'],
+  \ 'elm': ['elm-language-server']
+  \ }
 let g:LanguageClient_selectionUI = "fzf"
 
 nmap <space>j :call LanguageClient#textDocument_hover()<cr>
