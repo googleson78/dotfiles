@@ -187,9 +187,10 @@ let g:LanguageClient_serverCommands = {
   \ }
 let g:LanguageClient_selectionUI = "fzf"
 
+nmap <space>h :call LanguageClient#textDocument_definition()<cr>
 nmap <space>j :call LanguageClient#textDocument_hover()<cr>
-nmap <space>k :call LanguageClient#textDocument_definition()<cr>
-nmap <space>l :call LanguageClient#textDocument_codeAction()<cr>
+nmap <space>k :call LanguageClient#textDocument_codeAction()<cr>
+nmap <space>l :call LanguageClient#handleCodeLensAction()<cr>
 
 set signcolumn=no
 
