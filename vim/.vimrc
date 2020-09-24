@@ -182,7 +182,7 @@ let g:LanguageClient_rootMarkers = {
   \ 'elm': ['elm.json']
   \ }
 let g:LanguageClient_serverCommands = {
-  \ 'haskell': ['haskell-language-server', '--lsp'],
+  \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
   \ 'elm': ['elm-language-server']
   \ }
 let g:LanguageClient_selectionUI = "fzf"
