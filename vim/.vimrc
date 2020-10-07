@@ -105,6 +105,11 @@ autocmd FileType idris call SetIdrisIndent()
 " clear trailing whitespace on save
 autocmd BufWritePost ?* %s/\s\+$//e
 
+autocmd FileType haskell call s:set_format_on_save()
+
+function! s:set_format_on_save()
+  autocmd BufWritePost ?* call LanguageClient#textDocument_formatting_sync()
+endfunction
 " enable undo history saving
 set undofile
 " directory for undo files
