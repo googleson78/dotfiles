@@ -170,7 +170,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'ayu-theme/ayu-vim' " or other package manager
+Plug 'ayu-theme/ayu-vim'
 
 " matching parens get same colour, different matches are different colours
 Plug 'kien/rainbow_parentheses.vim'
