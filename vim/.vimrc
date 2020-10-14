@@ -29,6 +29,8 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
+" nvim only!
+set inccommand=split
 " leader
 let mapleader=";"
 let maplocalleader="`"
