@@ -179,6 +179,9 @@ Plug 'kien/rainbow_parentheses.vim'
 
 " go to next haskell indentation level
 Plug 'axelf4/vim-haskell'
+
+" highlight hovered words
+Plug 'dominikduda/vim_current_word'
 call plug#end()
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
@@ -273,3 +276,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" don't highlight current word
+let g:vim_current_word#highlight_current_word = 0
