@@ -110,7 +110,7 @@ autocmd BufWritePre ?* %s/\s\+$//e
 autocmd FileType haskell call s:set_format_on_save()
 
 function! s:set_format_on_save()
-  autocmd BufWritePre ?* call LanguageClient#textDocument_formatting_sync()
+  autocmd BufWritePre <buffer> call LanguageClient#textDocument_formatting_sync()
 endfunction
 " enable undo history saving
 set undofile
