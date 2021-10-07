@@ -186,11 +186,6 @@ call plug#end()
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
 
-" LanguageClient-neovim
-let g:LanguageClient_rootMarkers = {
-  \ 'haskell': ['*.cabal', 'stack.yaml'],
-  \ 'elm': ['elm.json']
-  \ }
 let g:LanguageClient_serverCommands = {
   \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
   \ 'elm': ['elm-language-server']
