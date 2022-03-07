@@ -108,6 +108,7 @@ autocmd FileType idris call SetIdrisIndent()
 autocmd BufWritePre ?* %s/\s\+$//e
 
 autocmd FileType haskell call s:set_format_on_save()
+autocmd FileType nix call s:set_format_on_save()
 
 function! s:set_format_on_save()
   autocmd BufWritePre <buffer> call LanguageClient#textDocument_formatting_sync()
@@ -182,13 +183,17 @@ Plug 'axelf4/vim-haskell'
 
 " highlight hovered words
 Plug 'dominikduda/vim_current_word'
+
+" nix
+Plug 'LnL7/vim-nix'
 call plug#end()
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
 
 let g:LanguageClient_serverCommands = {
   \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
-  \ 'elm': ['elm-language-server']
+  \ 'elm': ['elm-language-server'],
+  \ 'nix': ['rnix-lsp']
   \ }
 let g:LanguageClient_selectionUI = "fzf"
 
