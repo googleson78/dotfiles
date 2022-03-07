@@ -176,6 +176,9 @@ assign [class="(?i)deluge"] 9
 # always start telegram on 10
 assign [class="(?i)telegram"] 10
 
+# always start thunderbird on 10
+assign [class="(?i)thunderbird"] 10
+
 # use a normal font
 font pango:Liberation Mono 9
 
