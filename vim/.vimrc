@@ -47,7 +47,8 @@ nnoremap j gj
 nnoremap k gk
 " jk -> esc
 inoremap jk <esc>
-
+" consider '-' a part of keywords
+set iskeyword+=-
 " switch tabs
 nnoremap <F7> :tabp <CR>
 nnoremap <F8> :tabn <CR>
