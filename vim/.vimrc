@@ -246,6 +246,9 @@ nnoremap <space>w :Buffers<cr>
 nnoremap <space>q :Files<cr>
 nnoremap <space>o <Plug>CtrlSFCwordExec
 vnoremap <space>o <Plug>CtrlSFVwordExec
+" hs
+nnoremap <space>t :CtrlSF -R '(data\|newtype\|type) <c-r><c-w>'<cr>
+
 
 " idris settings
 
