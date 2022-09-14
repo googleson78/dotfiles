@@ -280,3 +280,8 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " don't highlight current word
 let g:vim_current_word#highlight_current_word = 0
+
+let g:LanguageClient_loggingLevel = 'INFO'
+let g:LanguageClient_virtualTextPrefix = ''
+let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
+let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
