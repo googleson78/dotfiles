@@ -120,9 +120,10 @@ set undofile
 set undodir=~/.vim/.undohistory/
 
 call plug#begin()
-" fuzzy searching different stuff
-" files mostly
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" fuzzy search
+" rely on system fzf, so that we get it from nix, so it's not broken
+" (most likely)
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " grep
