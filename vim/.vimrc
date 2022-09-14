@@ -167,7 +167,10 @@ Plug 'vmchale/dhall-vim'
 Plug 'dtaskoff/elm-vim'
 
 " md
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+" should have npm installed!
+" we use this because the linker for the binary this downloads otherwise is
+" hardcoded, which doesn't work with nix(os)
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
 
 " LSP
 Plug 'autozimu/LanguageClient-neovim', {
