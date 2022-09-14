@@ -242,10 +242,10 @@ let g:ctrlsf_mapping = {
 " open window on the right
 let g:ctrlsf_position = 'right'
 
-nmap <space>w :Buffers<cr>
-nmap <space>q :Files<cr>
-nmap <space>o <Plug>CtrlSFCwordExec
-vmap <space>o <Plug>CtrlSFVwordExec
+nnoremap <space>w :Buffers<cr>
+nnoremap <space>q :Files<cr>
+nnoremap <space>o <Plug>CtrlSFCwordExec
+vnoremap <space>o <Plug>CtrlSFVwordExec
 
 " idris settings
 
