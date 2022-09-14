@@ -202,6 +202,7 @@ nmap <space>h :call LanguageClient#textDocument_definition()<cr>
 nmap <space>j :call LanguageClient#textDocument_hover()<cr>
 nmap <space>k :call LanguageClient#textDocument_codeAction()<cr>
 nmap <space>l :call LanguageClient#handleCodeLensAction()<cr>
+nmap <space>; :call LanguageClient#textDocument_references()<cr>
 
 set signcolumn=no
 
