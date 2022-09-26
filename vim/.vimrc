@@ -253,6 +253,7 @@ nnoremap <space>o <Plug>CtrlSFCwordExec
 vnoremap <space>o <Plug>CtrlSFVwordExec
 " hs
 nnoremap <space>t :CtrlSF -R '(data\|newtype\|type) <c-r><c-w>'<cr>
+nnoremap <space>f :CtrlSF -R '<c-r><c-w>[ ]*::'<cr>
 
 
 " idris settings
