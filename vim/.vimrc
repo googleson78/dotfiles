@@ -193,6 +193,7 @@ Plug 'dominikduda/vim_current_word'
 Plug 'LnL7/vim-nix'
 call plug#end()
 
+" try out nil for nix when it has formatting
 let g:LanguageClient_serverCommands = {
   \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
   \ 'elm': ['elm-language-server'],
