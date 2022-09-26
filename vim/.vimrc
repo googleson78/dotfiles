@@ -192,8 +192,6 @@ Plug 'dominikduda/vim_current_word'
 " nix
 Plug 'LnL7/vim-nix'
 call plug#end()
-"let ayucolor="mirage" " for mirage version of theme
-"colorscheme ayu
 
 let g:LanguageClient_serverCommands = {
   \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
