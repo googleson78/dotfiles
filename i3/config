@@ -162,6 +162,9 @@ bindsym $mod+r mode "resize"
 # borders
 hide_edge_borders both
 default_border none
+# some things seem to override default_border none
+# but this seems to overpower them
+for_window [class="^.*"] border none
 
 # scratchpad
 bindsym $mod+Shift+minus move scratchpad
