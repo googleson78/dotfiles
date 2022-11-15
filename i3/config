@@ -161,7 +161,7 @@ bindsym $mod+r mode "resize"
 
 # borders
 hide_edge_borders both
-new_window pixel 0
+default_border none
 
 # scratchpad
 bindsym $mod+Shift+minus move scratchpad
