@@ -203,6 +203,7 @@ let g:LanguageClient_serverCommands = {
   \ 'nix': ['rnix-lsp']
   \ }
 let g:LanguageClient_selectionUI = "fzf"
+let g:LanguageClient_rootMarkers = ['ghc.root']
 
 nmap <space>h :call LanguageClient#textDocument_definition()<cr>
 nmap <space>j :call LanguageClient#textDocument_hover()<cr>
