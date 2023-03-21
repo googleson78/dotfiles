@@ -204,6 +204,7 @@ let g:LanguageClient_serverCommands = {
   \ }
 let g:LanguageClient_selectionUI = "fzf"
 let g:LanguageClient_rootMarkers = ['ghc.root']
+let g:LanguageClient_settingsPath = "/home/googleson78/.vim/lc-settings/settings.json"
 
 nmap <space>h :call LanguageClient#textDocument_definition()<cr>
 nmap <space>j :call LanguageClient#textDocument_hover()<cr>
