@@ -191,6 +191,9 @@ Plug 'dominikduda/vim_current_word'
 
 " nix
 Plug 'LnL7/vim-nix'
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
 
 " try out nil for nix when it has formatting
@@ -293,3 +296,15 @@ let g:LanguageClient_loggingLevel = 'INFO'
 let g:LanguageClient_virtualTextPrefix = ''
 let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
 let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
+
+lua <<EOF
+require "nvim-treesitter.configs".setup {
+  ensure_installed = "all",
+
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+
+}
+EOF
