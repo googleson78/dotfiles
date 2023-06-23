@@ -203,7 +203,6 @@ call plug#end()
 let g:LanguageClient_serverCommands = {
   \ 'haskell': ['haskell-language-server-wrapper', 'lsp'],
   \ 'elm': ['elm-language-server'],
-  \ 'nix': ['rnix-lsp']
   \ 'nix': ['nil'],
   \ }
 let g:LanguageClient_selectionUI = "fzf"
