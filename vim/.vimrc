@@ -198,20 +198,28 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " try out nil for nix when it has formatting
+"  \ 'haskell': ['nix-shell', '/home/googleson78/git/ghc.nix', '--pure', '--arg', 'withHadrianDeps', 'true', '--arg', 'withIde', 'true', '--run', 'haskell-language-server-wrapper --lsp'],
+"
 let g:LanguageClient_serverCommands = {
-  \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
+  \ 'haskell': ['haskell-language-server-wrapper', 'lsp'],
   \ 'elm': ['elm-language-server'],
   \ 'nix': ['rnix-lsp']
+  \ 'nix': ['nil'],
   \ }
 let g:LanguageClient_selectionUI = "fzf"
 let g:LanguageClient_rootMarkers = ['ghc.root']
 let g:LanguageClient_settingsPath = "/home/googleson78/.vim/lc-settings/settings.json"
+
+command! Cprev try | cprev | catch | clast | catch | endtry
+command! Cnext try | cnext | catch | cfirst | catch | endtry
 
 nmap <space>h :call LanguageClient#textDocument_definition()<cr>
 nmap <space>j :call LanguageClient#textDocument_hover()<cr>
 nmap <space>k :call LanguageClient#textDocument_codeAction()<cr>
 nmap <space>l :call LanguageClient#handleCodeLensAction()<cr>
 nmap <space>; :call LanguageClient#textDocument_references()<cr>
+nmap <space>x :Cprev<cr>
+nmap <space>c :Cnext<cr>
 
 set signcolumn=no
 
