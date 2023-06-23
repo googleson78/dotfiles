@@ -44,3 +44,15 @@ function flakify {
   fi
   ${EDITOR:-vim} flake.nix
 }
+
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+alias nr="nix repl nixpkgs\#legacyPackages.x86_64-linux"
+
+export PATH=$PATH:/home/googleson78/.local/bin
+
+function detach {
+  $* &>/dev/null &!
+}
+
+alias nd="nix develop -c zsh"
