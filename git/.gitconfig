@@ -27,3 +27,7 @@
 	ff = only
 [init]
 	defaultBranch = main
+[diff]
+	external = difft
+[fetch]
+	recurseSubmodules = true
