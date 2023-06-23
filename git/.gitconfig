@@ -23,6 +23,7 @@
 	conflictStyle = diff3
 [alias]
   graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+  treebranch = "!f() { echo -n 'name:'; read BRANCH_NAME; git worktree add -b \"gl/${BRANCH_NAME}\" ../\"${BRANCH_NAME}\"; }; f"
 [pull]
 	ff = only
 [init]
