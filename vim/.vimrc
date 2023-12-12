@@ -92,6 +92,18 @@ set secure
 " share register with system clipboard by default
 set clipboard=unnamed
 
+let g:clipboard = {
+  \   'name': 'helic',
+  \   'copy': {
+  \      '+': 'hel yank --agent nvim',
+  \      '*': 'hel yank --agent nvim',
+  \    },
+  \   'paste': {
+  \      '+': 'xsel -bo --display :0',
+  \      '*': 'xsel -bo --display :0',
+  \   },
+  \ }
+
 " copy file and overwrite old one instead of renaming and writing a new one
 " this is used because some tools (`spago`) get triggered twice with
 " `backupcopy=no`
