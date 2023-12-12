@@ -192,8 +192,6 @@ Plug 'dominikduda/vim_current_word'
 
 " nix
 Plug 'LnL7/vim-nix'
-" treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " indentation based block objects
 Plug 'michaeljsmith/vim-indent-object'
