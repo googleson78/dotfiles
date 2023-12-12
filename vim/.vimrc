@@ -133,9 +133,8 @@ set undofile
 set undodir=~/.vim/.undohistory/
 
 call plug#begin()
-" fuzzy search
-" rely on system fzf, so that we get it from nix, so it's not broken
-" (most likely)
+" fuzzy searching different stuff
+" files mostly
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
