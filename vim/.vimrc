@@ -132,6 +132,9 @@ set undofile
 " directory for undo files
 set undodir=~/.vim/.undohistory/
 
+" try to not autojump to next item when highlighting with *
+nnoremap <silent> * :let @/= '\<' . expand('<cword>') . '\>' <bar> set hls <cr>
+
 call plug#begin()
 " fuzzy searching different stuff
 " files mostly
