@@ -195,6 +195,8 @@ Plug 'LnL7/vim-nix'
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" indentation based block objects
+Plug 'michaeljsmith/vim-indent-object'
 call plug#end()
 
 " try out nil for nix when it has formatting
