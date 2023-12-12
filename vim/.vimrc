@@ -212,8 +212,7 @@ Plug 'michaeljsmith/vim-indent-object'
 call plug#end()
 
 " try out nil for nix when it has formatting
-"  \ 'haskell': ['nix-shell', '/home/googleson78/git/ghc.nix', '--pure', '--arg', 'withHadrianDeps', 'true', '--arg', 'withIde', 'true', '--run', 'haskell-language-server-wrapper --lsp'],
-"
+" \ 'haskell': ['nix', 'develop', '/home/googleson78/git/ghc.nix', '--command', 'haskell-language-server-wrapper', 'lsp'],
 let g:LanguageClient_serverCommands = {
   \ 'haskell': ['haskell-language-server-wrapper', 'lsp'],
   \ 'elm': ['elm-language-server'],
