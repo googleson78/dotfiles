@@ -136,8 +136,8 @@ set undodir=~/.vim/.undohistory/
 nnoremap <silent> * :let @/= '\<' . expand('<cword>') . '\>' <bar> set hls <cr>
 
 call plug#begin()
-" fuzzy searching different stuff
-" files mostly
+" rely on system fzf, so that we get it from nix, so it's not broken
+" (most likely)
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
