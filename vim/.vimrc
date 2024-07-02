@@ -211,6 +211,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'kana/vim-textobj-user'
 Plug 'neovimhaskell/nvim-hs.vim'
 Plug 'isovector/cornelis'
+Plug 'tpope/vim-abolish'
 call plug#end()
 
 " agda
