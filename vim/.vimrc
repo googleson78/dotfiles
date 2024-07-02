@@ -82,7 +82,7 @@ set viewoptions-=options
 
 " disallow backspace from deleting text that wasn't entered in the current
 " "insert" session
-set backspace=1
+set backspace=indent,eol
 
 " allow "per project" vimrcs
 set exrc
