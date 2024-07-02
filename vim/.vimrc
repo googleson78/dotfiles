@@ -151,9 +151,6 @@ Plug 'easymotion/vim-easymotion'
 " git
 Plug 'tpope/vim-fugitive'
 
-" agda
-Plug 'derekelkins/agda-vim'
-
 " idris
 Plug 'idris-hackers/idris-vim'
 
@@ -209,7 +206,17 @@ Plug 'LnL7/vim-nix'
 
 " indentation based block objects
 Plug 'michaeljsmith/vim-indent-object'
+
+" agda, requires agda and cornelis to be externally provided
+Plug 'kana/vim-textobj-user'
+Plug 'neovimhaskell/nvim-hs.vim'
+Plug 'isovector/cornelis'
 call plug#end()
+
+" agda
+" get agda from elsewhere (nix)
+let g:cornelis_use_global_binary = 1
+let g:cornelis_split_location = 'bottom'
 
 " try out nil for nix when it has formatting
 " \ 'haskell': ['nix', 'develop', '/home/googleson78/git/ghc.nix', '--command', 'haskell-language-server-wrapper', 'lsp'],
@@ -233,8 +240,44 @@ nmap <space>; :call LanguageClient#textDocument_references()<cr>
 nmap <space>x :Cprev<cr>
 nmap <space>c :Cnext<cr>
 
-set signcolumn=no
+" cornelis
+" note that these override the previous group
+" TODO: ideally we should instead do this based on buffer type somehow
+autocmd FileType agda call AgdaFiletype()
+function! AgdaFiletype()
+    " nnoremap <buffer> <space>l :CornelisLoad<CR>
+    nnoremap <buffer> <space>m :CornelisQuestionToMeta<CR>
+    nnoremap <buffer> <space>r :CornelisRefine<CR>
+    nnoremap <buffer> <space>c :CornelisMakeCase<CR>
+    nnoremap <buffer> <space>, :CornelisTypeContext<CR>
+    nnoremap <buffer> <space><space>, :CornelisTypeContext Normalised<CR>
+    nnoremap <buffer> <space>d :CornelisTypeInfer<CR>
+    nnoremap <buffer> <space><space>d :CornelisTypeInfer Normalised<CR>
+    nnoremap <buffer> <space>. :CornelisTypeContextInfer<CR>
+    nnoremap <buffer> <space><space>. :CornelisTypeContextInfer Normalised<CR>
+    nnoremap <buffer> <space>g :CornelisGive<CR>
 
+    nnoremap <buffer> <space>n :CornelisSolve<CR>
+    nnoremap <buffer> <space>a :CornelisAuto<CR>
+    nnoremap <buffer> <space>h :CornelisGoToDefinition<CR>
+    nnoremap <buffer> <space>[ :CornelisPrevGoal<CR>
+    nnoremap <buffer> <space>] :CornelisNextGoal<CR>
+    nnoremap <buffer> <C-A>     :CornelisInc<CR>
+    nnoremap <buffer> <C-X>     :CornelisDec<CR>
+
+
+    nnoremap <buffer> <space>l :w<CR>
+    autocmd BufWritePost <buffer> execute "normal! :CornelisLoad\<CR>"
+endfunction
+
+" workaround for https://github.com/isovector/cornelis/issues/138
+augroup AgdaFikscheta
+  autocmd!
+  autocmd FileType agda set comments=mb1:--
+  autocmd FileType agda set commentstring=--\ %s
+augroup END
+
+set signcolumn=no
 
 " ctrlsf settings
 " focus on the ctrlsf window when it's done
@@ -304,6 +347,8 @@ set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='medium'
+" let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_contrast_light='hard'
 colorscheme gruvbox
 
 " enable rainbow parens on startup
